@@ -1,0 +1,33 @@
+<h1>Watches</h1>
+
+<p><a href="/new_watch">Add a New Watch</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Movie</th>
+      <th>When</th>
+      <th>Where</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @watches.each do |watch| %>
+    <tr>
+          <td><%= watch.user_id %></td>
+          <td><%= watch.movie_id %></td>
+          <td><%= watch.when %></td>
+          <td><%= watch.where %></td>
+          <td><a href="/watches/<%= watch.id %>">Show</a>
+        </td>
+      <td><a href="/watches/<%= watch.id %>/edit">Edit</a></td>
+      <td><a href="/watches/<%= watch.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

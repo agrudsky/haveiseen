@@ -1,0 +1,69 @@
+<h1>Editing Movie #<%= @movie.id %></h1>
+
+<form action="/movies/<%= @movie.id %>/update">
+  <div>
+    <label for="title">title</label><br />
+    <input id="title" name="title" value="<%= @movie.title  %>" type="text" />
+  </div>
+  <div>
+    <label for="releasedate">releasedate</label><br />
+    <input id="releasedate" name="releasedate" value="<%= @movie.releasedate  %>" type="text" />
+  </div>
+  <div>
+    <label for="rating">rating</label><br />
+    <input id="rating" name="rating" value="<%= @movie.rating  %>" type="text" />
+  </div>
+  <div>
+    <label for="runtime">runtime</label><br />
+    <input id="runtime" name="runtime" value="<%= @movie.runtime  %>" type="text" />
+  </div>
+  <div>
+    <label for="genre">genre</label><br />
+    <input id="genre" name="genre" value="<%= @movie.genre  %>" type="text" />
+  </div>
+  <div>
+    <label for="director">director</label><br />
+    <input id="director" name="director" value="<%= @movie.director  %>" type="text" />
+  </div>
+  <div>
+    <label for="writer">writer</label><br />
+    <input id="writer" name="writer" value="<%= @movie.writer  %>" type="text" />
+  </div>
+  <div>
+    <label for="actors">actors</label><br />
+    <input id="actors" name="actors" value="<%= @movie.actors  %>" type="text" />
+  </div>
+  <div>
+    <label for="plot">plot</label><br />
+    <input id="plot" name="plot" value="<%= @movie.plot  %>" type="text" />
+  </div>
+  <div>
+    <label for="language">language</label><br />
+    <input id="language" name="language" value="<%= @movie.language  %>" type="text" />
+  </div>
+  <div>
+    <label for="country">country</label><br />
+    <input id="country" name="country" value="<%= @movie.country  %>" type="text" />
+  </div>
+  <div>
+    <label for="awards">awards</label><br />
+    <input id="awards" name="awards" value="<%= @movie.awards  %>" type="text" />
+  </div>
+  <div>
+    <label for="poster">poster</label><br />
+    <input id="poster" name="poster" value="<%= @movie.poster  %>" type="text" />
+  </div>
+  <div>
+    <label for="metascore">metascore</label><br />
+    <input id="metascore" name="metascore" value="<%= @movie.metascore  %>" type="text" />
+  </div>
+  <div>
+    <label for="imdbrating">imdbrating</label><br />
+    <input id="imdbrating" name="imdbrating" value="<%= @movie.imdbrating  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

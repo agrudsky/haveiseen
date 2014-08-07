@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="column">
+    <div class="row">
+<h1><center><%= @parsed_result['movies'][0]['title'] %></center></h1>
+<img src="<%= @parsed_result['movies'][0]['posters']['profile'] %>" alt="poster" width="150px" ALIGN=LEFT>
+      <p class="movie"><b>Synopsis:</b> <%= @parsed_result['movies'][0]['synopsis'] %> <br>
+      <b>Filmed in:</b> <%= @parsed_result['movies'][0]['year'] %> <br>
+      <b>Rated:</b> <%= @parsed_result['movies'][0]['mpaa_rating'] %> <br>
+      <b>Runtime:</b> <%= @parsed_result['movies'][0]['runtime'] %> minutes <br>
+      <b>Critics Rating:</b> <%= @parsed_result['movies'][0]['ratings']['critics_rating'] %> <br>
+      <b>Critics Score:</b> <%= @parsed_result['movies'][0]['ratings']['critics_score'] %> <br>
+      <b>Audience Rating:</b> <%= @parsed_result['movies'][0]['ratings']['audience_rating'] %> <br>
+      <b>Audience Score:</b> <%= @parsed_result['movies'][0]['ratings']['audience_score'] %> <br>
+ <br>
+
+
+
+        <b>Cast:</b> <br> <% @parsed_result['movies'][0]['abridged_cast'].each do |cast| %>
+  <%= cast['name']%> as <%= cast['characters'][0]%> <br>
+      <% end %></p>
+  </div>
+
+
+  

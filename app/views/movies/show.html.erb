@@ -1,0 +1,65 @@
+<h1>Movie #<%= @movie.id %></h1>
+
+<div>
+  <strong>Title</strong>:<br />
+  <p><%= @movie.title %></p>
+</div>
+<div>
+  <strong>Releasedate</strong>:<br />
+  <p><%= @movie.releasedate %></p>
+</div>
+<div>
+  <strong>Rating</strong>:<br />
+  <p><%= @movie.rating %></p>
+</div>
+<div>
+  <strong>Runtime</strong>:<br />
+  <p><%= @movie.runtime %></p>
+</div>
+<div>
+  <strong>Genre</strong>:<br />
+  <p><%= @movie.genre %></p>
+</div>
+<div>
+  <strong>Director</strong>:<br />
+  <p><%= @movie.director %></p>
+</div>
+<div>
+  <strong>Writer</strong>:<br />
+  <p><%= @movie.writer %></p>
+</div>
+<div>
+  <strong>Actors</strong>:<br />
+  <p><%= @movie.actors %></p>
+</div>
+<div>
+  <strong>Plot</strong>:<br />
+  <p><%= @movie.plot %></p>
+</div>
+<div>
+  <strong>Language</strong>:<br />
+  <p><%= @movie.language %></p>
+</div>
+<div>
+  <strong>Country</strong>:<br />
+  <p><%= @movie.country %></p>
+</div>
+<div>
+  <strong>Awards</strong>:<br />
+  <p><%= @movie.awards %></p>
+</div>
+<div>
+  <strong>Poster</strong>:<br />
+  <p><%= @movie.poster %></p>
+</div>
+<div>
+  <strong>Metascore</strong>:<br />
+  <p><%= @movie.metascore %></p>
+</div>
+<div>
+  <strong>Imdbrating</strong>:<br />
+  <p><%= @movie.imdbrating %></p>
+</div>
+
+<a href="/movies/<%= @movie.id %>/edit">Edit</a> |
+<a href="/movies/<%= @movie.id %>/destroy">Destroy</a>

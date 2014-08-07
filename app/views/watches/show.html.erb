@@ -1,0 +1,21 @@
+<h1>Watch #<%= @watch.id %></h1>
+
+<div>
+  <strong>User</strong>:<br />
+  <p><%= @watch.user_id %></p>
+</div>
+<div>
+  <strong>Movie</strong>:<br />
+  <p><%= @watch.movie_id %></p>
+</div>
+<div>
+  <strong>When</strong>:<br />
+  <p><%= @watch.when %></p>
+</div>
+<div>
+  <strong>Where</strong>:<br />
+  <p><%= @watch.where %></p>
+</div>
+
+<a href="/watches/<%= @watch.id %>/edit">Edit</a> |
+<a href="/watches/<%= @watch.id %>/destroy">Destroy</a>

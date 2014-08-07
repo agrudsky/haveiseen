@@ -1,0 +1,25 @@
+<h1>Editing Watch #<%= @watch.id %></h1>
+
+<form action="/watches/<%= @watch.id %>/update">
+  <div>
+    <label for="user_id">user_id</label><br />
+    <input id="user_id" name="user_id" value="<%= @watch.user_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="movie_id">movie_id</label><br />
+    <input id="movie_id" name="movie_id" value="<%= @watch.movie_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="when">when</label><br />
+    <input id="when" name="when" value="<%= @watch.when  %>" type="text" />
+  </div>
+  <div>
+    <label for="where">where</label><br />
+    <input id="where" name="where" value="<%= @watch.where  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+
