@@ -25,7 +25,7 @@
 <p><%= @user.name %> has seen the following movies:<p>
 <ul>
   <% @user.watches.each do |watch| %>
-  <li><%= watch.movie_id %></li>
+  <li><%= watch.movie_title %></li>
   <td><a href="/watches/<%= watch.id %>/destroy">I Haven't Seen This Movie</a></td>
   <% end %>
 </ul>

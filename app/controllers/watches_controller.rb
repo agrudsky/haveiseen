@@ -45,9 +45,13 @@ class WatchesController < ApplicationController
 
   def destroy
     @watch = Watch.find_by(id: params[:id])
+    if @watch.id != session['user_id']
+      redirect_to "/users", :notice => "Can't access #{@watch.username}, fool"
+    else
     @watch.destroy
 
 
     redirect_to "/watches"
+    end
   end
 end

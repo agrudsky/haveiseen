@@ -22,10 +22,11 @@
           <td><%= user.name %></td>
           <td><%= user.gender %></td>
           <td><%= user.email %></td>
-          <td><a href="/users/<%= user.id %>">Show</a>
-        </td>
-      <td><a href="/users/<%= user.id %>/edit">Edit</a></td>
-      <td><a href="/users/<%= user.id %>/destroy" onclick="return confirm('Are you sure?')">Destroy</a></td>
+      <% if session['user_id'] %>
+        <td><a href="/users/<%= user.id %>">Show</a></td>
+        <td><a href="/users/<%= user.id %>/edit">Edit</a></td>
+        <td><a href="/users/<%= user.id %>/destroy">Destroy</a></td>
+      <% end %>
     </tr>
   <% end %>
   </tbody>
