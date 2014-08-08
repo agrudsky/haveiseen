@@ -9,14 +9,8 @@ If your friends use haveiseen, just look at their profiles to see what movies th
 
 Here are some examples of when you would use haveiseen:
 
-1. You have just watched a movie and want to keep track of it so you know not to watch it again in the future. 
-You go onto haveiseen, and after searching for the movie you watched, hit the "I've Seen It!" button. 
-This adds the movie to your Watched list, which can be accessed from your profile.
+1. You have just watched a movie and want to keep track of it so you know not to watch it again in the future. You go onto haveiseen, and after searching for the movie you watched, hit the "I've Seen It!" button. This adds the movie to your Watched list, which can be accessed from your profile.
 
-2. You know a movie that your friend has recommended but want to look at ratings before you watch it. 
-You simply go on the website, look for the movie, and the website automatically pulls up rating information 
-from Rotten Tomatoes for you.
+2. You know a movie that your friend has recommended but want to look at ratings before you watch it. You simply go on the website, look for the movie, and the website automatically pulls up rating information from Rotten Tomatoes for you.
 
-3. You want to see what movies your friends have watched. Luckily, you and your friends already have profiles 
-on haveiseen and are keeping track of the movies that you've watched. You simply visit a friend's profile and 
-can easily see what movies they've watched.
+3. You want to see what movies your friends have watched. Luckily, you and your friends already have profiles on haveiseen and are keeping track of the movies that you've watched. You simply visit a friend's profile and can easily see what movies they've watched.
