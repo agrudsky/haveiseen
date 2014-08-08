@@ -61,7 +61,7 @@ header ::selection {
 }
 
 .link {
-  padding-right: 1000px;
+  padding-right: 200px;
 }
 
 .navbar {
@@ -83,4 +83,8 @@ header ::selection {
 .movie {
   padding-top:10px;
   padding-left:200px;
+}
+
+.poster1 {
+  float:left;
 }

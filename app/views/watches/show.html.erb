@@ -1,21 +1,21 @@
 <h1>Watch #<%= @watch.id %></h1>
 
 <div>
-  <strong>User</strong>:<br />
+  <strong>Username</strong>:<br />
+  <p><%= @watch.username %></p>
+</div>
+<div>
+  <strong>User ID</strong>:<br />
   <p><%= @watch.user_id %></p>
 </div>
 <div>
-  <strong>Movie</strong>:<br />
+  <strong>Movie Title</strong>:<br />
+  <p><%= @watch.movie_title %></p>
+</div>
+<div>
+  <strong>Movie ID</strong>:<br />
   <p><%= @watch.movie_id %></p>
-</div>
-<div>
-  <strong>When</strong>:<br />
-  <p><%= @watch.when %></p>
-</div>
-<div>
-  <strong>Where</strong>:<br />
-  <p><%= @watch.where %></p>
 </div>
 
 <a href="/watches/<%= @watch.id %>/edit">Edit</a> |
-<a href="/watches/<%= @watch.id %>/destroy">Destroy</a>
+<a href="/watches/<%= @watch.id %>/destroy" onclick="return confirm('Are you sure?')">>Destroy</a>

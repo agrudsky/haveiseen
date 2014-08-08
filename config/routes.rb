@@ -59,4 +59,5 @@ Rails.application.routes.draw do
   get '/sessions/destroy' => 'sessions#destroy'
   get '/movie_search' => 'movies#search'
   get '/result' => 'movies#result'
+  get '/seenit' => 'movies#seenit'
 end

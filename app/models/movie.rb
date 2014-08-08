@@ -1,3 +1,3 @@
 class Movie < ActiveRecord::Base
-  belongs_to :watch
+  has_many :watches
 end

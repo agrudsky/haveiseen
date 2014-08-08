@@ -25,7 +25,7 @@
           <td><a href="/users/<%= user.id %>">Show</a>
         </td>
       <td><a href="/users/<%= user.id %>/edit">Edit</a></td>
-      <td><a href="/users/<%= user.id %>/destroy">Destroy</a></td>
+      <td><a href="/users/<%= user.id %>/destroy" onclick="return confirm('Are you sure?')">Destroy</a></td>
     </tr>
   <% end %>
   </tbody>

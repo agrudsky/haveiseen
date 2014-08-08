@@ -1,24 +1,40 @@
+<h3><center>Movies found: <%= @parsed_result['total'] %></center></h3>
+<% @parsed_result['movies'].each do |parsed_result| %>
+
 <div class="container">
   <div class="column">
     <div class="row">
-<h1><center><%= @parsed_result['movies'][0]['title'] %></center></h1>
-<img src="<%= @parsed_result['movies'][0]['posters']['profile'] %>" alt="poster" width="150px" ALIGN=LEFT>
-      <p class="movie"><b>Synopsis:</b> <%= @parsed_result['movies'][0]['synopsis'] %> <br>
-      <b>Filmed in:</b> <%= @parsed_result['movies'][0]['year'] %> <br>
-      <b>Rated:</b> <%= @parsed_result['movies'][0]['mpaa_rating'] %> <br>
-      <b>Runtime:</b> <%= @parsed_result['movies'][0]['runtime'] %> minutes <br>
-      <b>Critics Rating:</b> <%= @parsed_result['movies'][0]['ratings']['critics_rating'] %> <br>
-      <b>Critics Score:</b> <%= @parsed_result['movies'][0]['ratings']['critics_score'] %> <br>
-      <b>Audience Rating:</b> <%= @parsed_result['movies'][0]['ratings']['audience_rating'] %> <br>
-      <b>Audience Score:</b> <%= @parsed_result['movies'][0]['ratings']['audience_score'] %> <br>
- <br>
-
-
-
-        <b>Cast:</b> <br> <% @parsed_result['movies'][0]['abridged_cast'].each do |cast| %>
-  <%= cast['name']%> as <%= cast['characters'][0]%> <br>
-      <% end %></p>
+      <h1><center><%= parsed_result['title'] %></center></h1>
+      <img class="poster1" src="<%= parsed_result['posters']['original'] %>" alt="poster" width="150px">
+      <p class="movie">
+        <% if parsed_result['synopsis'] %>
+          <b>Synopsis:</b> <%= parsed_result['synopsis'] %> <br>
+        <% else %>
+          <b>Oh no! We couldn't find a synopsis for this movie.</b> <br>
+        <% end %>
+        <b>Filmed in:</b> <%= parsed_result['year'] %> <br>
+        <b>Rated:</b> <%= parsed_result['mpaa_rating'] %> <br>
+        <b>Runtime:</b> <%= parsed_result['runtime'] %> minutes <br>
+        <b>Critics Rating:</b> <%= parsed_result['ratings']['critics_rating'] %> <br>
+        <b>Critics Score:</b> <%= parsed_result['ratings']['critics_score'] %> <br>
+        <b>Audience Rating:</b> <%= parsed_result['ratings']['audience_rating'] %> <br>
+        <b>Audience Score:</b> <%= parsed_result['ratings']['audience_score'] %> <br>
+        <br> 
+        <b>Cast:</b> <br> 
+        <% parsed_result['abridged_cast'].each do |cast| %>
+          <%= cast['name']%> 
+          <% if cast['characters'] %>
+            as <%= cast['characters'][0] %>
+          <% end %>      
+          <br>
+          <% end %>
+      </p>
+      <form method="get" action="/seenit">
+        <input type="hidden" name="id" value="<%= parsed_result['id'] %>">
+        <button type="submit">I've Seen It!</button>
+        </form>
+    </div>
   </div>
+</div>
 
-
-  
+<% end %>

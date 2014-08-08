@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  belongs_to :watch
+  has_many :watches
   
   has_secure_password
 end

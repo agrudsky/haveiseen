@@ -32,6 +32,8 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     if @user.id != session['user_id']
       redirect_to "/users", :notice => "Can't access #{@user.name}, fool"
+    else
+      render 'edit'
     end
   end
 

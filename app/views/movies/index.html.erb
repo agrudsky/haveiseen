@@ -6,20 +6,13 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Releasedate</th>
+      <th>Year</th>
       <th>Rating</th>
       <th>Runtime</th>
-      <th>Genre</th>
-      <th>Director</th>
-      <th>Writer</th>
-      <th>Actors</th>
-      <th>Plot</th>
-      <th>Language</th>
-      <th>Country</th>
-      <th>Awards</th>
-      <th>Poster</th>
-      <th>Metascore</th>
-      <th>Imdbrating</th>
+      <th>Critics Rating</th>
+      <th>Critics Score</th>
+      <th>Audience Rating</th>
+      <th>Audience Score</th>
       <th></th>
       <th></th>
       <th></th>
@@ -30,24 +23,17 @@
   <% @movies.each do |movie| %>
     <tr>
           <td><%= movie.title %></td>
-          <td><%= movie.releasedate %></td>
+          <td><%= movie.year %></td>
           <td><%= movie.rating %></td>
           <td><%= movie.runtime %></td>
-          <td><%= movie.genre %></td>
-          <td><%= movie.director %></td>
-          <td><%= movie.writer %></td>
-          <td><%= movie.actors %></td>
-          <td><%= movie.plot %></td>
-          <td><%= movie.language %></td>
-          <td><%= movie.country %></td>
-          <td><%= movie.awards %></td>
-          <td><%= movie.poster %></td>
-          <td><%= movie.metascore %></td>
-          <td><%= movie.imdbrating %></td>
+          <td><%= movie.critics_rating %></td>
+          <td><%= movie.critics_score %></td>
+          <td><%= movie.audience_rating %></td>
+          <td><%= movie.audience_score %></td>
           <td><a href="/movies/<%= movie.id %>">Show</a>
         </td>
       <td><a href="/movies/<%= movie.id %>/edit">Edit</a></td>
-      <td><a href="/movies/<%= movie.id %>/destroy">Destroy</a></td>
+      <td><a href="/movies/<%= movie.id %>/destroy" onclick="return confirm('Are you sure?')">Destroy</a></td>
     </tr>
   <% end %>
   </tbody>

@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
     def login_required
       user = User.find_by(id: session['user_id'])
     if user.blank?
-      redirect_to"/home"
+      redirect_to"/sessions/new"
     end
   end
   
