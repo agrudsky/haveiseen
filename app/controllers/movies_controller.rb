@@ -99,7 +99,6 @@ class MoviesController < ApplicationController
       @parsed_result = JSON.parse(result)
       @movie = Movie.new
       @movie.title = @parsed_result['title']
-      @movie.year = @parsed_result['year']
       @movie.rating = @parsed_result['mpaa_rating']
       @movie.runtime = @parsed_result['runtime']
       @movie.synopsis = @parsed_result['synopsis']
