@@ -60,4 +60,5 @@ Rails.application.routes.draw do
   get '/movie_search' => 'movies#search'
   get '/result' => 'movies#result'
   get '/seenit' => 'movies#seenit'
+  get '/' => 'home#redirecttohome'
 end

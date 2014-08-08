@@ -6,6 +6,7 @@
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400' rel='stylesheet' type='text/css'>
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <title>haveiseen.it</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -26,19 +27,19 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/home">Home</a>
+        <a class="navbar-brand" href="/home" style="color:#23cdfc;font-weight:bold;font-size:18px;text-decoration:underline;font-family: 'Open Sans', sans-serif;">Home</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
         <ul class="nav navbar-nav" class="navnav">
-          <li><a class="link" href="/users">Users</a></li>
-          <li><a class="link" href="/movie_search">Search Movies</a></li>
+          <li><a href="/users" style="color:#FF00FF;font-weight:bold;font-size:18px;text-decoration:underline;padding-right:40px;font-family: 'Open Sans', sans-serif;">Users</a></li>
+          <li><a href="/movie_search" style="color:#51FF00;font-weight:bold;font-size:18px;text-decoration:underline;font-family: 'Open Sans', sans-serif;">Search Movies</a></li>
           <li class="swag">  
   <% if session['user_id'] %>
   <% u = User.find_by_id(session['user_id']) %>
-            <a class="swag"> Welcome back, <%= u.name %></a></li>
-          <li><a href="/sessions/destroy">Sign out</a></li>
+            <a class="swag" style="color:#fc6769;font-weight:bold;font-size:18px;text-decoration:none;font-family: 'Open Sans', sans-serif;"> Welcome back, <%= u.name %></a></li>
+          <li><a href="/sessions/destroy" style="color:#fffe9f;font-weight:bold;font-size:18px;text-decoration:underline;font-family: 'Open Sans', sans-serif;">Sign out</a></li>
   <% else %>
   <li><a href="/sessions/new">Sign In</a><li>
   <% end %> 

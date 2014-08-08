@@ -57,11 +57,7 @@ header ::selection {
 }
 
 .navbar-brand {
-  padding-right:60px;
-}
-
-.link {
-  padding-right: 200px;
+  padding-right:40px;
 }
 
 .navbar {
