@@ -60,7 +60,7 @@ class MoviesController < ApplicationController
     @movie.destroy
 
 
-    redirect_to "/movies"
+    redirect_to "/users"
   end
   
   def search
@@ -74,7 +74,6 @@ class MoviesController < ApplicationController
   end
   
   def seenit
-    @userid = session['userid']
     id = params['id']
     url = "http://api.rottentomatoes.com/api/public/v1.0/movies/#{ id }.json?apikey=js5cqpuccjd47ymjtjwhcnsy"
     result = open(url).read
@@ -91,7 +90,7 @@ class MoviesController < ApplicationController
       @watch.movie_id = id
       @watch.user_id = session['user_id']
       @watch.save
-      redirect_to "/users/#{ @userid }"
+      redirect_to "/users/#{ @watch.user_id }"
     else
       u = User.find_by_id(session['user_id'])
       url = "http://api.rottentomatoes.com/api/public/v1.0/movies/#{ id }.json?apikey=js5cqpuccjd47ymjtjwhcnsy"
@@ -114,7 +113,7 @@ class MoviesController < ApplicationController
       @watch1.movie_id = id
       @watch1.user_id = session['user_id']
       @watch1.save
-      redirect_to "/users/#{ @userid }"
+      redirect_to "/users/#{ @watch.user_id }"
     end
   end
     

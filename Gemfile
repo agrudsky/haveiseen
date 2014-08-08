@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'starter_generators', :git => 'https://github.com/arjunvenkat/starter_generators.git'
 
+gem 'seed_dump'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
